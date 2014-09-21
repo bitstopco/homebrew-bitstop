@@ -6,12 +6,12 @@ class Openbazaar < Formula
 
   version "0.1.0"
 
-  depends_on "gpg"
-  depends_on "sqlite3"
-  depends_on "python"
-  depends_on "wget"
-  depends_on "openssl"
-  depends_on "zmq"
+  depends_on "gpg" => :build
+  depends_on "sqlite3" => :build
+  depends_on "python" => :build
+  depends_on "wget" => :build
+  depends_on "openssl" => :build
+  depends_on "zmq" => :build
 
   def install
 
@@ -23,7 +23,7 @@ class Openbazaar < Formula
 
     system "./pow.sh "+version
 
-    system "cp openbazaar /usr/local/bin/"
+    bin.install "openbazaar"
 
     print "\n\n"
 
@@ -33,7 +33,7 @@ class Openbazaar < Formula
 
       OpenBazaar configuration finished.
 
-      Type openbazaar --help yo get started.
+      Type openbazaar help yo get started.
 
     EOS
   end
