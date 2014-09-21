@@ -6,12 +6,12 @@ class Openbazaar < Formula
 
   version "0.1.0"
 
-  depends_on "gpg" => :build
-  depends_on "sqlite3" => :build
-  depends_on "python" => :build
-  depends_on "wget" => :build
-  depends_on "openssl" => :build
-  depends_on "zmq" => :build
+  depends_on "gpg"
+  depends_on "sqlite3"
+  depends_on "python"
+  depends_on "wget"
+  depends_on "openssl"
+  depends_on "zmq"
 
   def install
 
